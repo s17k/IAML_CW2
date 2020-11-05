@@ -34,10 +34,14 @@ Instructions will be provided on the IAML Learn page telling you where to upload
 
 ## Change log
    Abbreviation: [I]: Instruction sheet (PDF file), [T]: Assignment_2.tex (Latex file)
-   
-* 03/Nov/2020 Ver. 1.0.0 -> 1.0.1 [I,T]
-  * Fixed a typo in Question 1.8
-    * Plot all the test samples (Xtrn_nm)" --> "Plot all the training samples (Xtrn_nm)"
 
+* 05/Nov/2020 Ver. 1.0.2 [I,T]
+  * Q1.3: Modified the wording to
+     "report the variances of projected data for the first five principal components in a table"
+     
+  * Q1.4: Modifed the wordiing to
+     "Plot a graph of the cumulative explained variance ratio as a function of the number of principal components, K, where 1 ≤ K ≤ 784."
+* 03/Nov/2020 Ver. 1.0.1 [I,T]
+  * Fixed a typo in Q1.8: "Plot all the test samples (Xtrn_nm)" --> "Plot all the training samples (Xtrn_nm)"
 * 02/Nov/2020 Ver. 1.0.0 [I,T]
   * Initial version
