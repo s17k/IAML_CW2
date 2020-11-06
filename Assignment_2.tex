@@ -89,7 +89,9 @@
     
 
       \begin{answerbox}{10em}
-         Your Answer Here
+      	$$X_{first} \approx (-3.137 \times 10^{-6}, -22.680 \times 10^{-6}, -117.974 \times 10^{-6}, -407.059 \times 10^{-6}, \ldots)^T$$
+      	$$X_{last} \approx (-3.137 \times 10^{-6}, -22.680 \times 10^{-6}, -117.974 \times 10^{-6}, -407.059 \times 10^{-6}, \ldots)^T$$
+      	      	
       \end{answerbox}
   
 
@@ -110,7 +112,9 @@
 
 
   \begin{answerbox}{52em}
-    Your Answer Here
+    \begin{center}
+	\includegraphics[width=\textwidth]{imgs/1_2.png}
+	\end{center}
   \end{answerbox}
 
 
@@ -131,7 +135,15 @@
 
 
     \begin{answerbox}{15em}
-      Your Answer Here
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline 
+    K & 1 & 2 & 3 & 4 & 5 \\
+    \hline 
+    Var & 19.81& 12.11& 4.11& 3.38& 2.62 \\ 
+    \hline 
+    \end{tabular} 
+    \end{center}
     \end{answerbox}
     
 
@@ -149,7 +161,14 @@
    
 
       \begin{answerbox}{30em}
-         Your Answer Here
+        \begin{center}
+			\includegraphics[width=\textwidth]{imgs/1_4.png}
+		\end{center}
+		\begin{itemize}
+		\itemsep -3pt {}
+		\item We can see that the cumulative explained variance grows quickly in the $ 1 \leq K  \leq 100 $ interval. Following that, the function increases much more slowly.
+		\item Therefore, as for $K=100$, PCA components explain $90\%$ of the variance, it looks like a good compromise between accuracy and complexity.
+		\end{itemize}
       \end{answerbox}
   
 
@@ -167,7 +186,15 @@
    
 
       \begin{answerbox}{35em}
-         Your Answer Here
+         \begin{center}
+	\includegraphics[width=\textwidth]{imgs/1_5.png}
+	\end{center}
+	
+	\begin{itemize}
+	\itemsep -3pt {}
+	\item We can see that the first component measures how much a picture resembles a shirt, as it has a shape of a t-shirt with gray areas in the shapes of sleeves. This makes sense as there are 4 classes with similar shapes (0: T-Shirt/Top, 2: Pullover, 4: Coat, 6: Shirt). These classes share a shape, so it makes sense to identify it. 
+	\item Out of other principal components, we can also see that the 4-th and the 8-th one identify shoes, which is indeed a class of the training set.
+	\end{itemize}
       \end{answerbox}
   
 
@@ -189,7 +216,23 @@
      
 
       \begin{answerbox}{25em}
-         Your Answer Here
+      \begin{center}
+         \begin{tabular}{|c|c|c|c|c|}
+         \hline 
+        Class & K=5 & K=20 & K=50 & K=200 \\ \hline
+	    \#0 & 0.26 & 0.15 & 0.13 & 0.06\\
+		\#1 & 0.20 & 0.14 & 0.10 & 0.04\\
+		\#2 & 0.20 & 0.15 & 0.12 & 0.08\\
+		\#3 & 0.15 & 0.11 & 0.08 & 0.06\\
+		\#4 & 0.12 & 0.10 & 0.09 & 0.05\\
+		\#5 & 0.18 & 0.16 & 0.14 & 0.09\\
+		\#6 & 0.13 & 0.10 & 0.07 & 0.05\\
+		\#7 & 0.17 & 0.13 & 0.11 & 0.06\\
+		\#8 & 0.22 & 0.15 & 0.12 & 0.09\\
+		\#9 & 0.18 & 0.15 & 0.12 & 0.07\\
+		\hline
+         \end{tabular} 
+         \end{center}
       \end{answerbox}
   
 
@@ -208,7 +251,9 @@
    
 
       \begin{answerbox}{52em}
-         Your Answer Here
+             \begin{center}
+	\includegraphics[width=\textwidth]{imgs/1_7.png}
+	\end{center}
       \end{answerbox}
   
 
@@ -229,7 +274,9 @@
    
 
       \begin{answerbox}{40em}
-         Your Answer Here
+         \begin{center}
+	\includegraphics[width=\textwidth]{imgs/1_8.png}
+	\end{center}
       \end{answerbox}
   
 
