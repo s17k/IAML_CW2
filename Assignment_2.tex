@@ -89,8 +89,8 @@
     
 
       \begin{answerbox}{10em}
-      	$$X_{first} \approx (-3.137, -22.680, -117.974, -407.059)^T \times 10^{-6}$$
-      	$$X_{last} \approx (-3.137, -22.680, -117.974, -407.059)^T \times 10^{-6}$$
+      	$$X_{first} \approx (-3.137, -22.680, -117.974, -407.059, \ldots)^T \times 10^{-6}$$
+      	$$X_{last} \approx (-3.137, -22.680, -117.974, -407.059, \ldots)^T \times 10^{-6}$$
       	      	
       \end{answerbox}
   
@@ -113,7 +113,7 @@
 
   \begin{answerbox}{52em}
     \begin{center}
-	\includegraphics[width=\textwidth]{imgs/1_2.png}
+	\includegraphics[width=0.77\textwidth]{imgs/1_2.png}
 	\end{center}
   \end{answerbox}
 
@@ -136,6 +136,7 @@
 
     \begin{answerbox}{15em}
     \begin{center}
+    PCA variances of projected data for the first 5 components:
     \begin{tabular}{|c|c|c|c|c|c|}
     \hline 
     K & 1 & 2 & 3 & 4 & 5 \\
@@ -162,12 +163,13 @@
 
       \begin{answerbox}{30em}
         \begin{center}
-			\includegraphics[width=\textwidth]{imgs/1_4.png}
+			\includegraphics[width=0.75\textwidth]{imgs/1_4.png}
 		\end{center}
 		\begin{itemize}
 		\itemsep -3pt {}
-		\item We can see that the cumulative explained variance grows quickly in the $ 1 \leq K  \leq 100 $ interval. Following that, the function increases much more slowly.
-		\item Therefore, as for $K=100$, PCA components explain $90\%$ of the variance, it looks like a good compromise between accuracy and complexity.
+		\item We can see that the cumulative explained variance grows quickly in the $ 1 \leq K  \leq 50 $ interval. Following that, the function increases much more slowly.
+		\item Therefore, as $K=50$ PCA components explain $> 86\%$ of the variance, it looks like a good compromise between accuracy and complexity.
+		\item It is often useful to plot decision regions on the plane spanned by the first 2 PCA components. They explain only $\sim 53\%$ of the total variance here, so one would need to be cautious when using them.
 		\end{itemize}
       \end{answerbox}
   
@@ -192,8 +194,8 @@
 	
 	\begin{itemize}
 	\itemsep -3pt {}
-	\item We can see that the first component measures how much a picture resembles a shirt, as it has a shape of a t-shirt with gray areas in the shapes of sleeves. This makes sense as there are 4 classes with similar shapes (0: T-Shirt/Top, 2: Pullover, 4: Coat, 6: Shirt). These classes share a shape, so it makes sense to identify it. 
-	\item Out of other principal components, we can also see that the 4-th and the 8-th one identify shoes, which is indeed a class of the training set.
+	\item We can see that the first component measures how much a picture resembles a shirt, as it has a shape of a t-shirt with gray areas in the shapes of sleeves. This makes sense as there are 4 classes with similar shapes (0: T-Shirt/Top, 2: Pullover, 4: Coat, 6: Shirt). These classes share a shape, so lots of variance can be explained by identifying it. Therefore, it is expected for the most important principal component to identify it (even though PCA is unsupervised).
+	\item Out of the other principal components, we can similarily see that the 4-th and the 8-th one identify shoes. This makes sense, as there is a class with shoes and they have a unique shape.
 	\end{itemize}
       \end{answerbox}
   
@@ -217,19 +219,22 @@
 
       \begin{answerbox}{25em}
       \begin{center}
+      	RMSE between original and reconstructed samples \\for $K = 5,20,50,200$:\\
+      \end{center}
+      	\begin{center}
          \begin{tabular}{|c|c|c|c|c|}
          \hline 
-        Class & K=5 & K=20 & K=50 & K=200 \\ \hline
-	    \#0 & 0.26 & 0.15 & 0.13 & 0.06\\
-		\#1 & 0.20 & 0.14 & 0.10 & 0.04\\
-		\#2 & 0.20 & 0.15 & 0.12 & 0.08\\
-		\#3 & 0.15 & 0.11 & 0.08 & 0.06\\
-		\#4 & 0.12 & 0.10 & 0.09 & 0.05\\
-		\#5 & 0.18 & 0.16 & 0.14 & 0.09\\
-		\#6 & 0.13 & 0.10 & 0.07 & 0.05\\
-		\#7 & 0.17 & 0.13 & 0.11 & 0.06\\
-		\#8 & 0.22 & 0.15 & 0.12 & 0.09\\
-		\#9 & 0.18 & 0.15 & 0.12 & 0.07\\
+        & K=5 & K=20 & K=50 & K=200 \\ \hline
+	    Class \#0 & 0.26 & 0.15 & 0.13 & 0.06\\
+		Class \#1 & 0.20 & 0.14 & 0.10 & 0.04\\
+		Class \#2 & 0.20 & 0.15 & 0.12 & 0.08\\
+		Class \#3 & 0.15 & 0.11 & 0.08 & 0.06\\
+		Class \#4 & 0.12 & 0.10 & 0.09 & 0.05\\
+		Class \#5 & 0.18 & 0.16 & 0.14 & 0.09\\
+		Class \#6 & 0.13 & 0.10 & 0.07 & 0.05\\
+		Class \#7 & 0.17 & 0.13 & 0.11 & 0.06\\
+		Class \#8 & 0.22 & 0.15 & 0.12 & 0.09\\
+		Class \#9 & 0.18 & 0.15 & 0.12 & 0.07\\
 		\hline
          \end{tabular} 
          \end{center}
@@ -252,8 +257,9 @@
 
       \begin{answerbox}{52em}
              \begin{center}
-	\includegraphics[width=\textwidth]{imgs/1_7.png}
+	\includegraphics[width=0.5\textwidth]{imgs/1_7.png}
 	\end{center}
+	We should expect more components to yield better reconstructions and that is visibly the case. The more components we use, the more variance they explain. Therefore, the images should also look more and more realistic (less blurred) and they do.
       \end{answerbox}
   
 
