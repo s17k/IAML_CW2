@@ -113,8 +113,9 @@
 
   \begin{answerbox}{52em}
     \begin{center}
-	\includegraphics[width=0.77\textwidth]{imgs/1_2.png}
+	\includegraphics[width=0.75\textwidth]{imgs/1_2.png}
 	\end{center}
+	The closest samples from each class look very similar to the mean and have light colours. The furthest samples from each class are unusual examples of that class and are dark. This makes sense, as similar images will have usually smaller distances and gray deviations from mean increase the distance less than black ones do. 
   \end{answerbox}
 
 
@@ -195,7 +196,7 @@
 	\begin{itemize}
 	\itemsep -3pt {}
 	\item We can see that the first component measures how much a picture resembles a shirt, as it has a shape of a t-shirt with gray areas in the shapes of sleeves. This makes sense as there are 4 classes with similar shapes (0: T-Shirt/Top, 2: Pullover, 4: Coat, 6: Shirt). These classes share a shape, so lots of variance can be explained by identifying it. Therefore, it is expected for the most important principal component to identify it (even though PCA is unsupervised).
-	\item Out of the other principal components, we can similarily see that the 4-th and the 8-th one identify shoes. This makes sense, as there is a class with shoes and they have a unique shape.
+	\item Out of the other principal components, we can similarly see that the 4-th and the 8-th one identify shoes (and also $5$ and $10$, but to a smaller degree). This makes sense, as there are 3 classes of shoes and they share a unique shape.
 	\end{itemize}
       \end{answerbox}
   
@@ -283,6 +284,12 @@
          \begin{center}
 	\includegraphics[width=\textwidth]{imgs/1_8.png}
 	\end{center}
+	\begin{itemize}
+	\itemsep -3pt {}
+	\item The classes are not fully separated as we can, for example, see that red and blue samples mix in the middle.
+	\item We can also obersve that the bottom is dominated by blue samples and the top by red/orange ones. 
+	\item This suggests that the first PCA component has little discriminatory power (but explains more of the variance), while the second PCA component actually distinguishes between classes (given the first component).
+	\end{itemize}
       \end{answerbox}
   
 
@@ -468,7 +475,7 @@
            \begin{center}
 	\includegraphics[width=0.85\textwidth]{imgs/2_5.png}
 	\end{center}
-	The highest mean 3-fold CV accuracy score was $\sim 0.819$. \\
+	The highest mean 3-fold CV accuracy score was $\sim 85.65\%$. \\
 	It was realised by $C=10^{4/3} \approx 21.54$.
       \end{answerbox}
   
@@ -623,7 +630,7 @@ number & size \\\hline
 	\end{center}
 	\begin{itemize}
 	\itemsep -3pt {}
-	\item We can see that there are 4 languages that are diametrically different from the rest ($\{4,11,12,16\}$), as they are only merged with the rest in the final cluster and the distance along the final U-link is very long (represents distance here).
+	\item We can see that there are 4 languages that are diametrically different from the rest ($\{3,11,12,16\}$), as they are only merged with the rest in the final cluster and the distance along the final U-link is very long (represents distance here).
 	\item More generally, we can see that the lengths of U-links do not vary too much. For example, there are no pairs of unusually similar languages. 
 	\end{itemize}
       \end{answerbox}
@@ -652,7 +659,7 @@ number & size \\\hline
 	\itemsep -3pt {}
 	\item We can see that different linkage methods produce considerably different dendrograms. They are also all unbalanced.
 	\item Ward linkage produced a green cluster which approximately contains one cluster centre per language. This suggests that this cluster shares a language-universal attribute. For example, it might be the set of cluster centers of recordings of mostly children.
-	\item Unlike Ward, single and complete linkages produced single clusters that cover nearly all of the langauge cluster centers. This shows that there a small minority of cluster centers which are outliers (all among \{1,5,13,15,19\}).
+	\item Unlike Ward, single and complete linkages produced single clusters that cover nearly all of the language cluster centers. This shows that there a small minority of cluster centers which are outliers (all among \{1,5,13,15,19\}).
 	\end{itemize}
       \end{answerbox}
   
